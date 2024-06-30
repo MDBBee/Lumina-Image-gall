@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #cfc3ae;
+  --dark-color: #333;
+  --container-normal: 1100px;
+  --container-wide: 1400px;
+  --container-narrow: 900px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+/* Utility Clases */
+.bg-primary {
+  background: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid var(--dark-color);
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* Container */
+.container {
+  max-width: var(--container-normal);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-lg {
+  max-width: var(--container-wide);
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+/* header */
+.header {
+  margin: 1.5rem auto;
+}
+.header .logo {
+  width: 130px;
+}
+
+.header .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.header a {
+  padding: 0.5rem 1rem;
+}
+
+.header a:hover {
+  background: var(--primary-color);
+}
+.current {
+  background: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.gallery {
+  max-width: var(--container-wide);
+  margin: auto;
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: calc(33.333% - 20px);
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  border-radius: 10px;
+}
+
+.gallery-item:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #aaa;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+  /* border: 3px solid green; */
+}
+
+.footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer img {
+  width: 120px;
+  height: 35px;
+}
+
+.footer h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* About.html Page */
+.services {
+  padding: 3rem 0 4rem;
+  font-size: 1rem;
+}
+
+.services .container {
+  display: flex;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.services-flex {
+  width: calc(33.333% - 10px);
+}
+
+.services-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.team .container {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.team {
+  padding: 3rem 0 4rem;
+  /* border: 3px solid green; */
+}
+.team h2 {
+  margin-top: 1rem;
+}
+
+.team-item img {
+  border-radius: 8px;
+}
+
+.team-item p {
+  padding-bottom: 2rem;
+}
+
+/* Contact Us Page  */
+
+.contact-page {
+  padding: 3rem 0 4rem;
+}
+
+.contact-page p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.contact-page input,
+.contact-page textarea {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  padding: 1rem 0 1.2rem;
+  outline: none;
+}
+
+.contact-page textarea {
+  font-family: inherit;
+  height: 200px;
+}
+
+.contact-page button {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+/* media querry */
+@media screen and (max-width: 768px) {
+  .header .header-flex,
+  .footer .footer-flex,
+  .team .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .hero {
+    /* border: 2px solid red; */
+    height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+
+  .footer .footer-flex {
+    text-align: center;
+  }
+}
